@@ -37,7 +37,8 @@ class VisitLog
             if ($model) {
                 // update record of same IP eg new visit times, etc
                 $model->touch();
-                return $model->update($data);
+                $model->update($data);
+                return $model;
             }
         }
 
